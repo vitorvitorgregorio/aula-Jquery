@@ -13,17 +13,51 @@
     <!--Jquery-->
     <script src="js/jquery.min.js"></script>
     <!--ONLY JavaScript-->
-    <script src="js/"></script>
+    <script src="js/script.js"></script>
     <title>Document</title>
 </head>
 <body>
     
-    <nav class="navbar  navbar-light bg-light ">
+    <nav class="navbar  navbar-light bg-light menu">
         <a href="#" class="navbar-brand">Busca Cep</a>
         <div class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Digite seu Cep">
-            <button class="btn btn-outline-info meubtn">Encontrar</button>
+            <input class="form-control me-2" type="search" placeholder="Digite seu Cep" id="cep">
+            <button class="btn btn-outline-info meubtn" onclick="consultaCep()">Encontrar</button>
         </div>
     </nav>
+
+    <div class="container barra-progresso" style="margin-top: 60px;">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+        </div>
+    </div>
+
+    <div class="container cep">
+        <div class="row">
+            <h2>CEP</h2>
+        </div>
+        <div class="row">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Logradouro</td>
+                        <td id="logradouro"></td>
+                    </tr>
+                    <tr>
+                        <td>Bairro</td>
+                        <td id="bairro"></td>
+                    </tr>
+                    <tr>
+                        <td>Cidade</td>
+                        <td id="localidade"></td>
+                    </tr>
+                    <tr>
+                        <td>Estado</td>
+                        <td id="uf"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
